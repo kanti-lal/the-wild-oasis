@@ -7,7 +7,6 @@ export function useDeleteCabin() {
 
   const { isPending: isDeleting, mutate: deleteCabin } = useMutation({
     mutationFn: (id) => {
-      console.log("id", id);
       deleteCabinApi(id);
     },
     onSuccess: () => {

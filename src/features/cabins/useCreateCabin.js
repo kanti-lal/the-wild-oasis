@@ -6,7 +6,6 @@ export function useCreateCabin() {
   const queryClient = useQueryClient();
   const { mutate: createCabin, isPending: isCreating } = useMutation({
     mutationFn: ({ newCabinData }) => {
-      console.log("newCabinData", newCabinData);
       createEditCabin(newCabinData);
     },
     onSuccess: () => {
