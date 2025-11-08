@@ -18,13 +18,13 @@ function UpdateSettingsForm() {
 
   const { isUpdating, updateSetting } = useUpdateSetting();
 
-  if (isLoading) return <Spinner />;
-
   function handleUpdate(e, field) {
     const { value } = e.target;
     if (!value) return;
     updateSetting({ [field]: value });
   }
+
+  if (isLoading) return <Spinner />;
 
   return (
     <Form>
